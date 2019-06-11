@@ -8,6 +8,19 @@ module.exports = {
 		filename: '[name].[chunkhash:5].js',
 	},
 	devtool: 'cheap-module-source-map',
+	optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    },
+    minimize: true,
+  },
 	module: {
 		rules: [
 			{

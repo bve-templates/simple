@@ -20,13 +20,14 @@ module.exports = merge(
 		],
 		output: {
 			path: path.resolve('dist'),
+			library: 'my',
+			libraryTarget: 'window'
 		},
 		module: {
 			rules: [
 				// scss样式处理规则
 				{
 					test: /\.scss$/,
-					exclude: /(node_modules|bower_components)/,
 					use: [
 						{
 							loader: MiniCssExtractPlugin.loader,

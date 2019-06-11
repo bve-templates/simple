@@ -8,7 +8,7 @@ module.exports = function (api) {
 				"@babel/preset-env",
 				{
 					// 转换为其它模块语法， "amd" | "umd" | "systemjs" | "commonjs" | "cjs" | "auto" | false
-					modules: false, 
+					modules: 'commonjs', 
 					useBuiltIns: "usage",
 					corejs: 3,
 					shippedProposals: true, 
